@@ -12,12 +12,12 @@ use yii\filters\AccessControl;
  */
 class SiteController extends WebController
 {
-    
+
     protected function rules()
     {
         return [
             [
-                'actions' => ['login', 'error'],
+                'actions' => ['login', 'error', 'home'],
                 'allow' => true,
             ],
             [
@@ -82,5 +82,11 @@ class SiteController extends WebController
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    public function actionHome()
+    {
+        $this->layout = 'blank';
+        return $this->render('home');
     }
 }
