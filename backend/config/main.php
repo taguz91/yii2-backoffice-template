@@ -63,6 +63,17 @@ return [
                 ],
             ],
         ],
+
+        'i18n' => [
+            'translations' => [
+                '*' => [
+                    'class'          => 'yii\i18n\PhpMessageSource',
+                    'basePath'       => '@backend/messages',
+                    'sourceLanguage' => 'en',
+                    'fileMap'        => [],
+                ],
+            ],
+        ],
     ],
     'params' => $params,
 ];

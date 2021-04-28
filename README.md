@@ -7,9 +7,19 @@ DIRECTORY STRUCTURE
 
 ```
 common
+    cache/               contains all cache functionality
+    components/          contains your custom components
     config/              contains shared configurations
+    enums/               contains state apps
+    grid/                contains GridView and LinkPager with bootstrap4 support 
     models/              contains model classes used in both backend and frontend
+    providers/           contains all providers
+    repositories/        contains all querys for each model
     tests/               contains tests for common classes    
+    validators/          contains all custom validations 
+    helpers/             contains helpers for the app 
+    widgets/             contains widgets for the app
+    yii/                 contains yii base clases with custom implementations 
 console
     config/              contains console configurations
     controllers/         contains console controllers (commands)
@@ -20,6 +30,7 @@ backend
     config/              contains backend configurations
     controllers/         contains Web controller classes
     models/              contains backend-specific model classes
+    routes/              contains rules for the routes, and a custom helper for manage the urls 
     runtime/             contains files generated during runtime
     tests/               contains tests for backend application    
     views/               contains view files for the Web application
@@ -30,7 +41,7 @@ node_modules/            contains webpack dependent 3rd-party packages
 environments/            contains environment-based overrides
 ```
 
-For use webpack in dev mode you can use: 
+To use webpack in dev mode you can run: 
 ```bash
 $ npm run dev
 ```
